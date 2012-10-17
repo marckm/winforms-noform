@@ -52,7 +52,9 @@
         /// Handles the Exit menu item click.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
+        /// <param name="e">
+        /// The <see cref="EventArgs" /> instance containing the event data.
+        /// </param>
         private void Exit(object sender, EventArgs e)
         {
             // Hide tray icon, otherwise it will remain shown until user mouses over it

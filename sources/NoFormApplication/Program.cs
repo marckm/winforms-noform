@@ -12,6 +12,8 @@
         static void Main()
         {
             // do all your stuff here... (run a background thread, host a WCF service...)
+
+
             Application.ApplicationExit += OnApplicationExit;
             AppDomain.CurrentDomain.UnhandledException += OnCurrentDomainUnhandledException;
 
@@ -32,8 +34,12 @@
         /// Called when an unhandled exception appears.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="System.UnhandledExceptionEventArgs" /> instance containing the event data.</param>
-        private static void OnCurrentDomainUnhandledException(object sender, System.UnhandledExceptionEventArgs e)
+        /// <param name="e">
+        /// The <see cref="System.UnhandledExceptionEventArgs" /> instance containing the event data.
+        /// </param>
+        private static void OnCurrentDomainUnhandledException(
+            object sender,
+            System.UnhandledExceptionEventArgs e)
         {
             // we come here if there is any exception not handled correctly (i.e. in CustomContext).
             // normally we should log, display error to user and exit the app.
